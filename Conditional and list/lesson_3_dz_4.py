@@ -1,6 +1,6 @@
 first_num = int(input("Введіть перше число: "))
 operator = input("Введіть дію (+, -, *, /): ")
-second_num = int(input("Введіть дреге число: "))
+second_num = int(input("Введіть друге число: "))
 
 if operator == '+':
     print("Результат:", first_num + second_num)
