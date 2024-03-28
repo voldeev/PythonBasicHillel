@@ -1,20 +1,13 @@
-answer = 'yes'
+variable_name = input("Введіть ім'я змінної: ")
 
-while answer.lower() in ['yes', 'y']:
-    first_num = int(input("Введіть перше число: "))
-    operator = input("Введіть дію (+, -, *, /): ")
-    second_num = int(input("Введіть друге число: "))
-
-    if operator == '+':
-        print("Результат:", first_num + second_num)
-    elif operator == '-':
-        print("Результат:", first_num - second_num)
-    elif operator == '*':
-        print("Результат:", first_num * second_num)
-    elif operator == '/':
-        if second_num != 0:
-            print("Результат:", first_num / second_num)
-        else:
-            print("Ділити на нуль не можна!")
-
-    answer = input("Бажаєте продовжити роботу калькулятора? (yes/no): ")
+if (variable_name[0].isdigit() or any(char.isupper() for char in variable_name) or
+    any(char in "+-*/\\=<> !@#$%^&*()[]{}`~|;:'\",.?/" for char in variable_name) or
+    '__' in variable_name):
+    print(False)
+else:
+    if variable_name in ['and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else',
+                         'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda',
+                         'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']:
+        print(False)
+    else:
+        print(True)
