@@ -4,7 +4,6 @@ days, remaining_seconds = divmod(total_seconds, 24 * 60 * 60)
 hours, remaining_seconds = divmod(remaining_seconds, 60 * 60)
 minutes, seconds = divmod(remaining_seconds, 60)
 
-# Вибираємо правильне слово для "день" на основі кількості днів
 if days == 1:
     days_word = "день"
 elif days % 10 == 1 and days % 100 != 11:
